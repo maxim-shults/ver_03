@@ -1,12 +1,11 @@
 import os
 
 import Score
-import MemoryGame #import play as play_memory_game
-import GuessGame #import play as play_guess_game
-import CurrencyRouletteGame #import play as play_currency_game
+import MemoryGame 
+import GuessGame 
+import CurrencyRouletteGame 
 import Utils #import screen_cleaner
-# from MainScores import score_server
-#from Score import add_score
+
 
 def welcome():
     #clean_score_file()
@@ -41,13 +40,6 @@ def choose_difficulty(game_choice):
         if win:
             current_score = Score.add_score(difficulty)
 
-        # win = play_memory_game
-        # if win:
-        #     froml
-        #from MemoryGame import play
-        #play(difficulty)
-        # import Score
-        # add_score(difficulty)
 
 
 
@@ -55,24 +47,16 @@ def choose_difficulty(game_choice):
         win = GuessGame.play(difficulty)
         if win:
             current_score = Score.add_score(difficulty)
-        # from GuessGame import play
-        # play(difficulty)
+  
 
     elif game_choice == '3':
         win = CurrencyRouletteGame.play(difficulty)
         if win:
             current_score = Score.add_score(difficulty)
-        # from CurrencyRouletteGame import play
-        # play(difficulty)
+
     else:
         print("An error occurred, please restart")
 
-    #if True:
-
-       # from Utils import screen_cleaner
-        # screen_cleaner(score_f)
-        # from Score import add_score
-        # add_score(difficulty)
 
 
     while True:
